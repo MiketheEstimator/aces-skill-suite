@@ -1,0 +1,23 @@
+{
+  "qa_checks": {
+    "QA_GATE_XLSX_01":[
+      {
+        "error_code": "ERR_XLSX_COLOR_01",
+        "description": "Hardcoded values are not colored Blue (RGB: 0,0,255).",
+        "resolution": "Modify python openpyxl code to apply Font(color='0000FF') to static inputs."
+      },
+      {
+        "error_code": "ERR_XLSX_RECALC_02",
+        "description": "Formula recalculation script (scripts/recalc.py) not referenced.",
+        "resolution": "Append usage instructions for scripts/recalc.py to the final output."
+      }
+    ],
+    "QA_GATE_DOCX_01":[
+      {
+        "error_code": "ERR_DOCX_QUOTE_01",
+        "description": "Standard quotes used instead of XML entities.",
+        "resolution": "Replace all ' and \" with &#x2018;, &#x2019;, &#x201C;, &#x201D;."
+      }
+    ]
+  }
+}
