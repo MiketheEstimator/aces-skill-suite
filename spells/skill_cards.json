@@ -1,0 +1,28 @@
+{
+  "skills":[
+    {
+      "skill_id": "SKILL_DOC_WORD_DOCX",
+      "canonical_name": "Word Document Engineering",
+      "domain": "Document Generation",
+      "playbook_ref": "./spells/playbooks/DOCUMENT_ENGINEERING_MASTER.md",
+      "dss_signature": "Extract content or generate professional .docx files using python-docx or docx-js.",
+      "hard_constraints":[
+        "Use XML entities (&#x201C;) for smart quotes.",
+        "Metadata Author must be set to 'LLM'."
+      ],
+      "qa_gate_id": "QA_GATE_DOCX_01"
+    },
+    {
+      "skill_id": "SKILL_DATA_EXCEL_FINANCIAL",
+      "canonical_name": "Financial Excel Modeling",
+      "domain": "Tabular Data",
+      "playbook_ref": "./spells/playbooks/DATA_TABULAR_FINANCE_MASTER.md",
+      "dss_signature": "Generate structured XLSX with zero formula errors.",
+      "hard_constraints":[
+        "Blue text (RGB: 0,0,255) for hardcoded inputs.",
+        "Black text (RGB: 0,0,0) for formulas."
+      ],
+      "qa_gate_id": "QA_GATE_XLSX_01"
+    }
+  ]
+}
