@@ -1,6 +1,6 @@
 {
   "qa_checks": {
-    "QA_GATE_XLSX_01":[
+    "QA_GATE_XLSX_01": [
       {
         "error_code": "ERR_XLSX_COLOR_01",
         "description": "Hardcoded values are not colored Blue (RGB: 0,0,255).",
@@ -12,11 +12,47 @@
         "resolution": "Append usage instructions for scripts/recalc.py to the final output."
       }
     ],
-    "QA_GATE_DOCX_01":[
+    "QA_GATE_DOCX_01": [
       {
         "error_code": "ERR_DOCX_QUOTE_01",
         "description": "Standard quotes used instead of XML entities.",
         "resolution": "Replace all ' and \" with &#x2018;, &#x2019;, &#x201C;, &#x201D;."
+      }
+    ],
+    "QA_GATE_PDF_01": [
+      {
+        "error_code": "ERR_PDF_METADATA_01",
+        "description": "PDF is missing required title or author metadata.",
+        "resolution": "Populate PDF metadata fields title and author during document creation."
+      },
+      {
+        "error_code": "ERR_PDF_TEXT_LAYER_02",
+        "description": "PDF content is image-only without selectable text.",
+        "resolution": "Generate a text layer or use native text rendering unless OCR/image-only output is requested."
+      }
+    ],
+    "QA_GATE_JSON_01": [
+      {
+        "error_code": "ERR_JSON_SCHEMA_01",
+        "description": "Output does not validate against declared JSON schema.",
+        "resolution": "Validate output against schema and correct all validation errors before final response."
+      },
+      {
+        "error_code": "ERR_JSON_EXTRAS_02",
+        "description": "Unexpected fields found outside strict output contract.",
+        "resolution": "Remove all undeclared fields or extend the schema through controlled versioning."
+      }
+    ],
+    "QA_GATE_AEC_01": [
+      {
+        "error_code": "ERR_AEC_COORDS_01",
+        "description": "Output omits coordinate reference system/projection details.",
+        "resolution": "Include CRS/EPSG information in metadata and delivery notes."
+      },
+      {
+        "error_code": "ERR_AEC_UNITS_02",
+        "description": "Mixed or unspecified unit systems across AEC artifacts.",
+        "resolution": "Normalize units and declare canonical unit system before final output."
       }
     ]
   }

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aces.local/schemas/pdf.schema.json",
+  "title": "PDF Artifact Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_type",
+    "schema_version",
+    "file_name",
+    "mime_type",
+    "title",
+    "author",
+    "page_count",
+    "text_selectable"
+  ],
+  "properties": {
+    "artifact_type": { "const": "pdf" },
+    "schema_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "file_name": { "type": "string", "pattern": "^[^\\/]+\\.pdf$" },
+    "mime_type": { "const": "application/pdf" },
+    "title": { "type": "string", "minLength": 1 },
+    "author": { "type": "string", "minLength": 1 },
+    "page_count": { "type": "integer", "minimum": 1 },
+    "text_selectable": { "type": "boolean" },
+    "ocr_used": { "type": "boolean", "default": false }
+  }
+}
