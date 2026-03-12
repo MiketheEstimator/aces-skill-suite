@@ -1,12 +1,12 @@
 {
-  "skills":[
+  "skills": [
     {
       "skill_id": "SKILL_DOC_WORD_DOCX",
       "canonical_name": "Word Document Engineering",
       "domain": "Document Generation",
-      "playbook_ref": "./spells/playbooks/DOCUMENT_ENGINEERING_MASTER.md",
+      "playbook_ref": "./spells/playbooks/SKILL_DOC_WORD_DOCX.md",
       "dss_signature": "Extract content or generate professional .docx files using python-docx or docx-js.",
-      "hard_constraints":[
+      "hard_constraints": [
         "Use XML entities (&#x201C;) for smart quotes.",
         "Metadata Author must be set to 'LLM'."
       ],
@@ -18,11 +18,59 @@
       "domain": "Tabular Data",
       "playbook_ref": "./spells/playbooks/DATA_TABULAR_FINANCE_MASTER.md",
       "dss_signature": "Generate structured XLSX with zero formula errors.",
-      "hard_constraints":[
+      "hard_constraints": [
         "Blue text (RGB: 0,0,255) for hardcoded inputs.",
         "Black text (RGB: 0,0,0) for formulas."
       ],
       "qa_gate_id": "QA_GATE_XLSX_01"
+    },
+    {
+      "skill_id": "SKILL_DOC_PDF_PRECISION",
+      "canonical_name": "Precision PDF Engineering",
+      "domain": "Document Generation",
+      "playbook_ref": "./spells/playbooks/SKILL_PDF.md",
+      "dss_signature": "Produce text-selectable, metadata-complete PDF deliverables.",
+      "hard_constraints": [
+        "Set document title and author metadata.",
+        "Avoid image-only PDFs unless explicitly requested."
+      ],
+      "qa_gate_id": "QA_GATE_PDF_01"
+    },
+    {
+      "skill_id": "SKILL_VALIDATED_JSON_EXPORT",
+      "canonical_name": "Validated JSON Export",
+      "domain": "Structured Data",
+      "playbook_ref": "./spells/playbooks/SKILL_VALIDATED_JSON_EXPORT.md",
+      "dss_signature": "Emit strict JSON outputs conforming to published schemas.",
+      "hard_constraints": [
+        "All outputs must validate against schema.",
+        "No additional properties outside the declared contract."
+      ],
+      "qa_gate_id": "QA_GATE_JSON_01"
+    },
+    {
+      "skill_id": "SKILL_IFC_FILE",
+      "canonical_name": "IFC File Exchange",
+      "domain": "AEC/BIM",
+      "playbook_ref": "./spells/playbooks/SKILL_IFC_FILE.md",
+      "dss_signature": "Generate and validate IFC-oriented spatial coordination outputs.",
+      "hard_constraints": [
+        "Preserve coordinate system metadata.",
+        "Report schema version compatibility in deliverable notes."
+      ],
+      "qa_gate_id": "QA_GATE_AEC_01"
+    },
+    {
+      "skill_id": "SKILL_GIS_GEOSPATIAL",
+      "canonical_name": "GIS Geospatial Processing",
+      "domain": "AEC/BIM",
+      "playbook_ref": "./spells/playbooks/SKILL_GIS_GEOSPATIAL.md",
+      "dss_signature": "Create geospatially-aware outputs with reproducible coordinate references.",
+      "hard_constraints": [
+        "CRS/Projection must be explicitly declared.",
+        "Unit system must be consistent across exported layers."
+      ],
+      "qa_gate_id": "QA_GATE_AEC_01"
     }
   ]
 }
