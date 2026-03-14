@@ -650,6 +650,7 @@ Source:
 ```markdown
 \[ i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2 \Psi}{\partial x^2} + V(x)\Psi \]
 
+
 Source:
 
 ```markdown
@@ -676,6 +677,11 @@ Structural reading:
 * Right side, second term = potential term
 
 For maximum cross-platform reliability, prefer `\[ ... \]` for display math rather than `$$ ... $$`; Overleaf specifically recommends `\[ ... \]` instead of `$$ ... $$` in LaTeX contexts. ([Overleaf][2])
+> [!NOTE]  
+> **Troubleshooting: GitHub Preview vs. Native LaTeX**
+> If your equations are failing to render in the GitHub preview, check your delimiters. GitHub Flavored Markdown (GFM) requires `$$...$$` to trigger a multi-line display math block. If you use standard LaTeX `\[ ... \]` outside of a code block, GitHub's markdown parser will strip the backslashes and break the render.
+> 
+> **The Workaround:** When building skill sheets in `.md`, use `$$` for the visual preview section so it renders correctly on GitHub, but strictly instruct the LLM to output the gold-standard `\[ ... \]` inside its fenced code blocks for the final `.tex` artifact.
 
 So the shortest **definitive instruction** to reuse is:
 
