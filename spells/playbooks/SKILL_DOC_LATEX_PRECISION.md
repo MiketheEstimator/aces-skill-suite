@@ -683,7 +683,27 @@ For maximum cross-platform reliability, prefer `\[ ... \]` for display math rath
 > 
 > **The Workaround:** When building skill sheets in `.md`, use `$$` for the visual preview section so it renders correctly on GitHub, but strictly instruct the LLM to output the gold-standard `\[ ... \]` inside its fenced code blocks for the final `.tex` artifact.
 
-So the shortest **definitive instruction** to reuse is:
+```text
+GitHub Flavored Markdown (GFM) includes a specific set of five "Alert" callouts (also known as admonitions) that natively render with distinct colors and icons in the repository preview. 
+```
+([https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/])
+```
+> [!NOTE]  
+> Useful information that users should know, even when skimming.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]  
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]  
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
+## So the shortest **definitive instruction** to reuse is:
 
 ```text
 Use LaTeX display math for formal equations.
@@ -723,3 +743,4 @@ I can also give you a one-paragraph master instruction you can paste into any LL
 
 [1]: https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions?utm_source=chatgpt.com "Writing mathematical expressions"
 [2]: https://www.overleaf.com/learn/latex/Errors/Display_math_should_end_with_%24%24?utm_source=chatgpt.com "Display math should end with"
+[3]: https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/
