@@ -600,8 +600,9 @@ tlmgr install package-name
 # Python log parsing — stdlib only (no install needed)
 import re
 ```
-## Definitively: **you cannot get rendered display math inside a fenced code block**. A fenced code block is for showing literal source text, while display math is a separate Markdown/MathJax render pass. GitHub’s docs treat code blocks and mathematical expressions as different formatting features, and GitHub math rendering uses MathJax rather than code-block syntax. ([GitHub Docs][1])
-
+> [!NOTE]   
+>**you cannot get rendered display math inside a fenced code block**. A fenced code block is for showing literal source text, while display math is a separate Markdown/MathJax render pass. GitHub’s docs treat code blocks and mathematical expressions as different formatting features, and GitHub math rendering uses MathJax rather than code-block syntax. ([GitHub Docs][1])
+>
 So the unambiguous rule to tell any LLM is:
 
 **Use a fenced code block only to show the raw Markdown/LaTeX source.
