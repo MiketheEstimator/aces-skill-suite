@@ -684,9 +684,9 @@ For maximum cross-platform reliability, prefer `\[ ... \]` for display math rath
 > 
 > **The Workaround:** When building skill sheets in `.md`, use `$$` for the visual preview section so it renders correctly on GitHub, but strictly instruct the LLM to output the gold-standard `\[ ... \]` inside its fenced code blocks for the final `.tex` artifact.
 
-```text
+
 GitHub Flavored Markdown (GFM) includes a specific set of five "Alert" callouts (also known as admonitions) that natively render with distinct colors and icons in the repository preview. 
-```
+
 ([https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/])
 
 > [!NOTE]  
