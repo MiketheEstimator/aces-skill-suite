@@ -688,7 +688,7 @@ For maximum cross-platform reliability, prefer `\[ ... \]` for display math rath
 GitHub Flavored Markdown (GFM) includes a specific set of five "Alert" callouts (also known as admonitions) that natively render with distinct colors and icons in the repository preview. 
 ```
 ([https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/])
-```
+
 > [!NOTE]  
 > Useful information that users should know, even when skimming.
 
