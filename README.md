@@ -1,4 +1,4 @@
-# ACES Skill Suite (SkillPack)
+# Skills-ShowCase (ACES Skill Suite) (SkillPack)
 
 This repository serves as a machine-readable, dynamic SkillPack designed to augment Large Language Models (LLMs) with specialized workflows, deterministic routing rules, and strict output contracts.
 
