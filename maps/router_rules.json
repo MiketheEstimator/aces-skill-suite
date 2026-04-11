@@ -10,16 +10,9 @@
     {
       "node": "2_DOCUMENTS_AND_PARSING",
       "intent_triggers": ["Word", "PDF", "Markdown", "LaTeX", "Report", "RTF"],
-      "target_skill_ids": ["SKILL_DOC_WORD_DOCX", "SKILL_DOC_PDF_PRECISION"],
+      "target_skill_ids": ["SKILL_DOC_WORD_DOCX", "SKILL_AUTOMATED_PRECISION_PDF"],
       "playbook_ref": "./spells/playbooks/SKILL_DOC_WORD_DOCX.md",
       "confidence_threshold": 0.9
-    },
-    {
-      "node": "3_TABULAR_AND_STRUCTURED_DATA",
-      "intent_triggers": ["Excel", "XLSX", "Workbook", "Spreadsheet", "JSON", "Schema"],
-      "target_skill_ids": ["SKILL_DATA_EXCEL_FINANCIAL", "SKILL_VALIDATED_JSON_EXPORT"],
-      "playbook_ref": "./spells/playbooks/DATA_TABULAR_FINANCE_MASTER.md",
-      "confidence_threshold": 0.88
     }
   ],
   "fallback_action": "ACTIVATE_SKILL_STATE_LLM_SESSION_AND_ASK_CLARIFICATION"
